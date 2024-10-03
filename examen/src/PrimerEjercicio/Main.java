@@ -10,7 +10,7 @@ class MisionCasiImposible {
     private int minimoPuntosEXRequeridos;
     private List<String> accionesRequeridas;
 
-    // Constructor
+    // Constructores
     public MisionCasiImposible(String nombre, String dificultad, int puntosEXdeRecompensa,
             int minimoPuntosEXRequeridos) {
         this.nombre = nombre;
@@ -23,22 +23,18 @@ class MisionCasiImposible {
     public boolean addAccionRequerida(String accion) {
         if (!accionesRequeridas.contains(accion)) {
             accionesRequeridas.add(accion);
-            return true; // Acción agregada correctamente
+            return true; 
         }
-        return false; // Acción ya existente
+        return false; 
     }
 
-    // Método para obtener el nombre de la misión
+    // Métodos 
     public String getNombre() {
         return nombre;
     }
-
-    // Método para obtener los puntos de recompensa
     public int getPuntosEXRecompensa() {
         return puntosEXdeRecompensa;
     }
-
-    // Método que verifica si un jugador supera la misión basado en su experiencia
     public boolean superaMision(int puntosExperiencia) {
         return puntosExperiencia >= minimoPuntosEXRequeridos;
     }
